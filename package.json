@@ -12,8 +12,8 @@
     "stylelint": "stylelint \"src/**/*.scss\"",
     "stylelint:fix": "stylelint \"src/**/*.scss\" --fix",
     "lint:html": "linthtml \"src/**/*.html\"",
-    "lint:fix": "npm run format && npm run stylelint:fix",
     "lint": "npm run lint:html && npm run stylelint",
+    "lint:fix": "npm run format && npm run stylelint:fix",
     "prepare": "husky install",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
