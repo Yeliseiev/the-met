@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://github.com/Yeliseiev/template/",
   "scripts": {
     "clean": "rm dist/bundle.js",
     "start": "parcel src/index.html --open",
@@ -11,8 +12,11 @@
     "stylelint": "stylelint \"src/**/*.scss\"",
     "stylelint:fix": "stylelint \"src/**/*.scss\" --fix",
     "lint:html": "linthtml \"src/**/*.html\"",
-    "lint": "npm run format && npm run lint:html && npm run stylelint:fix",
-    "prepare": "husky install"
+    "lint:fix": "npm run format && npm run stylelint:fix",
+    "lint": "npm run lint:html && npm run stylelint",
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
