@@ -1,0 +1,32 @@
+{
+  "name": "landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html --out-dir=build --public-url=.",
+    "format": "prettier --write \"src/**/*.scss\" \"src/**/*.html\"",
+    "stylelint": "stylelint \"src/**/*.scss\"",
+    "stylelint:fix": "stylelint \"src/**/*.scss\" --fix",
+    "lint:html": "linthtml \"src/**/*.html\"",
+    "lint": "npm run format && npm run lint:html && npm run stylelint:fix",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@linthtml/linthtml": "^0.9.5",
+    "gh-pages": "^6.1.0",
+    "husky": "^8.0.3",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^3.1.1",
+    "sass": "^1.69.5",
+    "stylelint": "^16.0.2",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-recommended-scss": "^14.0.0",
+    "stylelint-scss": "^6.0.0"
+  }
+}
