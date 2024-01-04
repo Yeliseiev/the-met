@@ -1,0 +1,140 @@
+.menu {
+  height: 100vh;
+  background: $color-red;
+
+  &__content {
+    padding: 25px 0;
+
+    @include onTablet {
+      padding: 50px 0;
+    }
+  }
+
+  &__top {
+    margin-bottom: 40px;
+
+    @include onDesktop {
+      margin-bottom: 55px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 32px;
+    list-style: none;
+
+    @include onDesktop {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid transparent;
+    color: $color-white;
+    font-size: 22px;
+
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: $color-white;
+    }
+  }
+
+  &__call {
+    display: flex;
+
+    width: max-content;
+    flex-direction: column;
+    margin-bottom: 16px;
+
+    font-weight: 700;
+    gap: 8px;
+
+    &--phone {
+      @include generalText;
+      color: $color-white;
+
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  &__order {
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid $color-white;
+    color: $color-white;
+    font-size: 12px;
+
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 16px;
+    text-decoration: none;
+  }
+
+  &__close {
+    position: absolute;
+    right: 5%;
+    bottom: 150px;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+    cursor: pointer;
+
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+
+    &::before {
+      width: 1px;
+      height: 44px;
+      margin-bottom: 12px;
+
+      background-color: white;
+      content: "";
+
+      transition: margin 0.3s;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 125px;
+      width: 12px;
+      height: 12px;
+
+      background-image: url("../../src/images/phone.svg");
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+      transform: rotate(180deg);
+      transition: bottom 0.3s;
+    }
+
+    &:hover {
+      &::before {
+        margin-bottom: 22px;
+      }
+      &::after {
+        bottom: 145px;
+      }
+    }
+  }
+}

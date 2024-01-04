@@ -1,0 +1,84 @@
+.burger {
+  &__line {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: $burger-lineHeight / 5;
+
+    background: $color-white;
+
+    transform-origin: 2px;
+    transition:
+      width 0.3s,
+      height 0.2s,
+      rotate 0.3s;
+
+    &--top {
+      top: 0;
+    }
+
+    &--center {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--bottom {
+      bottom: 0;
+    }
+  }
+
+  &:hover &__line--top {
+    width: 70%;
+  }
+
+  &:hover &__line--bottom {
+    width: 40%;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    transform: translateX(100%);
+    transition: transform 0.3s;
+  }
+
+  &__toggle {
+    display: none;
+
+    &:checked ~ .burger__lines .burger__line--center {
+      height: 0;
+    }
+
+    &:checked ~ .burger__lines .burger__line--top {
+      width: 100%;
+      rotate: 45deg;
+    }
+
+    &:checked ~ .burger__lines .burger__line--bottom {
+      width: 100%;
+      rotate: -45deg;
+    }
+
+    &:checked ~ .burger__menu {
+      transform: translateX(0);
+    }
+  }
+
+  &__lines {
+    position: relative;
+    z-index: 3;
+    display: block;
+    width: $burger-lineWidth;
+    height: $burger-lineHeight;
+
+    cursor: pointer;
+
+    @include onTablet {
+      width: 24px;
+      height: 16px;
+    }
+  }
+}

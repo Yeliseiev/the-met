@@ -1,0 +1,41 @@
+.phone {
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  background-image: url(../images/phone.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-white;
+  text-align: right;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @include generalText;
+
+  @include onTablet {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__info {
+    position: relative;
+    top: 50%;
+
+    width: max-content;
+    padding-right: 20px;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-100%, -50%);
+    transition: opacity 1s;
+  }
+
+  @include onDesktop {
+    &:hover &__info {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}

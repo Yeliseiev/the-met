@@ -1,0 +1,36 @@
+.header {
+  height: 100vh;
+  padding: $header-paddings 0;
+
+  background-image: url(../images/header_img.jpg);
+  background-position: center;
+  background-size: cover;
+
+  color: $color-white;
+
+  @include onTablet {
+    padding: $header-paddings * 2 0;
+  }
+
+  &__title {
+    margin-top: 130px;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 100%;
+
+    text-align: center;
+
+    @include onTablet {
+      margin-top: 140px;
+
+      font-size: 64px;
+    }
+
+    @include onDesktop {
+      margin-top: 80px;
+
+      font-size: 80px;
+    }
+  }
+}

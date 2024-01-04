@@ -1,0 +1,13 @@
+.logo {
+  color: $color-white;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  line-height: 80%;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @include onTablet {
+    font-weight: 40px;
+  }
+}

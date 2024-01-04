@@ -1,0 +1,15 @@
+.footer {
+  position: sticky;
+  z-index: -1;
+  bottom: 0;
+
+  height: 180px;
+
+  background-image: url(../images/footer_img.jpg);
+  background-position: center;
+  background-size: cover;
+
+  @include onTablet {
+    height: 360px;
+  }
+}
