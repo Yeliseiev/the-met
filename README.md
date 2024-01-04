@@ -1,7 +1,7 @@
-# MyBike landing page
+# TheMet landing page
 
-- [DEMO LINK](https://yeliseiev.github.io/MyBike/)
-- [LAYOUT DESIGN](https://www.figma.com/file/Ic3SlZjkATYaS7uTifZAIk/BIKE)
+- [DEMO LINK](https://yeliseiev.github.io/the-met/)
+- [LAYOUT DESIGN](https://www.figma.com/file/lSR1m42L9YwzQwzzxKwHpw/THE-MET)
 
 Technologies used in project:
 
