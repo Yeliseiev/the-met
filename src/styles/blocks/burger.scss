@@ -3,7 +3,7 @@
     position: absolute;
     display: block;
     width: 100%;
-    height: $burger-lineHeight / 5;
+    height: calc($burger-lineHeight / 5);
 
     background: $color-white;
 
